@@ -7,7 +7,9 @@ import { AsyncStorageEngine } from '../../../src/lib/symbols';
     providedIn: 'root',
 })
 export class StorageService implements AsyncStorageEngine {
-    constructor(private storage: Storage) {}
+    constructor(private storage: Storage) {
+        this.init();
+    }
 
     length(): Observable<number> {
         return from(this.storage.length());
@@ -31,5 +33,9 @@ export class StorageService implements AsyncStorageEngine {
 
     key(val: number): Observable<string> {
         return from(this.storage.keys().then((keys) => keys[val]));
+    }
+
+    private async init(): Promise<void> {
+        await this.storage.create();
     }
 }

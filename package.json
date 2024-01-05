@@ -23,6 +23,10 @@
         {
             "name": "Marc Stammerjohann",
             "email": "marcstammerjohann@gmail.com"
+        },
+        {
+            "name": "Stephan Fischer",
+            "email": "info@mrfischer.de"
         }
     ],
     "scripts": {
@@ -48,11 +52,10 @@
         "@angular/platform-browser": "^12.2.13",
         "@angular/platform-browser-dynamic": "^12.2.13",
         "@angular/router": "^12.2.13",
+        "@capacitor/status-bar": "^5.0.6",
         "@ionic-native/core": "5.18.0",
-        "@ionic-native/splash-screen": "5.18.0",
-        "@ionic-native/status-bar": "5.18.0",
         "@ionic/angular": "5.8.5",
-        "@ionic/storage-angular": "^3.0.6",
+        "@ionic/storage-angular": "^3.0.4",
         "@ngxs/logger-plugin": "3.8.2",
         "@ngxs/store": "3.8.2",
         "ngxs-reset-plugin": "2.0.0",

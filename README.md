@@ -1,22 +1,23 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ngxs-labs/async-storage-plugin/master/docs/assets/logo.png">
+    <img src="https://raw.githubusercontent.com/stephan-fischer/async-storage-plugin/master/docs/assets/logo.png">
 </p>
 
 ---
 
 > Supports custom storage engine with async access
 
-[![NPM](https://badge.fury.io/js/%40ngxs-labs%2Fasync-storage-plugin.svg)](https://www.npmjs.com/package/@ngxs-labs/async-storage-plugin)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ngxs-labs/async-storage-plugin/blob/master/LICENSE)
+
+[![NPM](https://badge.fury.io/js/%40mrfischer%2Fasync-storage-plugin.svg)](https://www.npmjs.com/package/@mrfischer/async-storage-plugin)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/stephan-fischer/async-storage-plugin/blob/master/LICENSE)
 
 ## 📦 Install
 
-To install `@ngxs-labs/async-storage-plugin` run the following command:
+To install `@mrfischer/async-storage-plugin` run the following command:
 
 ```console
-npm install --save @ngxs-labs/async-storage-plugin
+npm install --save @mrfischer/async-storage-plugin
 # or if you use yarn
-yarn add @ngxs-labs/async-storage-plugin
+yarn add @mrfischer/async-storage-plugin
 ```
 
 ## 🔨 Usage
@@ -25,7 +26,7 @@ Import the module into your root application module:
 ```typescript
 import { NgModule } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
-import { NgxsAsyncStoragePluginModule } from '@ngxs-labs/async-storage-plugin';
+import { NgxsAsyncStoragePluginModule } from '@mrfischer/async-storage-plugin';
 
 @NgModule({
     imports: [

@@ -1,17 +1,7 @@
-import {
-    NgModule,
-    ModuleWithProviders,
-    InjectionToken,
-    TypeProvider,
-} from '@angular/core';
+import { NgModule, ModuleWithProviders, InjectionToken, TypeProvider } from '@angular/core';
 import { NGXS_PLUGINS } from '@ngxs/store';
-
 import { NgxsAsyncStoragePlugin } from './async-storage.plugin';
-import {
-    NgxsStoragePluginOptions,
-    NGXS_STORAGE_PLUGIN_OPTIONS,
-    STORAGE_ENGINE,
-} from './symbols';
+import { NgxsStoragePluginOptions, NGXS_STORAGE_PLUGIN_OPTIONS, STORAGE_ENGINE } from './symbols';
 import { storageOptionsFactory } from './internals';
 
 export const USER_OPTIONS = new InjectionToken('USER_OPTIONS');

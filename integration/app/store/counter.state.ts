@@ -1,4 +1,5 @@
 import { State, Action, StateContext } from '@ngxs/store';
+
 export class Increment {
     public static readonly type = '[Counter] Increment';
 }
@@ -20,18 +21,12 @@ export interface CounterStateModel {
 })
 export class CounterState {
     @Action(Increment)
-    public increment({
-        patchState,
-        getState,
-    }: StateContext<CounterStateModel>) {
+    public increment({patchState, getState}: StateContext<CounterStateModel>) {
         patchState({ count: getState().count + 1 });
     }
 
     @Action(Decrement)
-    public decrement({
-        patchState,
-        getState,
-    }: StateContext<CounterStateModel>) {
+    public decrement({patchState, getState}: StateContext<CounterStateModel>) {
         patchState({ count: getState().count - 1 });
     }
 }
