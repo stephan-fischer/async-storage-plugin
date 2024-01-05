@@ -1,18 +1,18 @@
 {
-  "name": "@ngxs-labs/async-storage-plugin",
-  "version": "0.2.0",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ngxs-labs/async-storage-plugin.git"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/ngxs-labs/async-storage-plugin#readme",
-  "bugs": {
-    "url": "https://github.com/ngxs-labs/async-storage-plugin/issues"
-  },
-  "peerDependencies": {
-    "@angular/core": ">=6.1.0 <14.0.0",
-    "@ngxs/store": ">=3.7.2",
-    "rxjs": ">=6.0.0"
-  }
+    "name": "@mrfischer/async-storage-plugin",
+    "version": "0.2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stephan-fischer/async-storage-plugin.git"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/stephan-fischer/async-storage-plugin#readme",
+    "bugs": {
+        "url": "https://github.com/stephan-fischer/async-storage-plugin/issues"
+    },
+    "peerDependencies": {
+        "@angular/core": ">=7.0.0 <14.0.0",
+        "@ngxs/store": ">=3.7.2",
+        "rxjs": ">=6.0.0"
+    }
 }
