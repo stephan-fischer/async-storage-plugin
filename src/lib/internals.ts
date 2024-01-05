@@ -12,10 +12,10 @@ export const DEFAULT_STATE_KEY = '@@STATE';
  * in the `forRoot` method when importing module
  */
 export type StorageKey =
-  | string
-  | StateClass
-  | StateToken<any>
-  | (string | StateClass | StateToken<any>)[];
+    | string
+    | StateClass
+    | StateToken<any>
+    | (string | StateClass | StateToken<any>)[];
 
 /**
  * This key is used to retrieve static metadatas on state classes.
@@ -24,32 +24,32 @@ export type StorageKey =
 const META_OPTIONS_KEY = 'NGXS_OPTIONS_META';
 
 function transformKeyOption(key: StorageKey): string[] {
-  if (!Array.isArray(key)) {
-    key = [key];
-  }
-
-  return key.map((token: string | StateClass) => {
-    if (typeof token === 'string') {
-      return token;
-    } else if (token instanceof StateToken) {
-      return (token as StateToken).getName();
+    if (!Array.isArray(key)) {
+        key = [key];
     }
 
-    const options = (token as any)[META_OPTIONS_KEY];
-    return options.name;
-  });
+    return key.map((token: string | StateClass) => {
+        if (typeof token === 'string') {
+            return token;
+        } else if (token instanceof StateToken) {
+            return (token as StateToken).getName();
+        }
+
+        const options = (token as any)[META_OPTIONS_KEY];
+        return options.name;
+    });
 }
 
 export function storageOptionsFactory(
-  options: NgxsStoragePluginOptions | undefined
+    options: NgxsStoragePluginOptions | undefined
 ): NgxsStoragePluginOptions {
-  if (options !== undefined && options.key) {
-    options.key = transformKeyOption(options.key);
-  }
-  return {
-    key: [DEFAULT_STATE_KEY],
-    serialize: JSON.stringify,
-    deserialize: JSON.parse,
-    ...options
-  };
+    if (options !== undefined && options.key) {
+        options.key = transformKeyOption(options.key);
+    }
+    return {
+        key: [DEFAULT_STATE_KEY],
+        serialize: JSON.stringify,
+        deserialize: JSON.parse,
+        ...options,
+    };
 }
