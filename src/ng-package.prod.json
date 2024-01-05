@@ -2,7 +2,7 @@
     "$schema": "../node_modules/ng-packagr/ng-package.schema.json",
     "dest": "../dist/@mrfischer/async-storage-plugin",
     "lib": {
-        "flatModuleFile": "stephan-fischer-async-storage-plugin",
+        "flatModuleFile": "mrfischer-async-storage-plugin",
         "entryFile": "public_api.ts"
     }
 }
